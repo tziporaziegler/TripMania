@@ -4,12 +4,6 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<div class=".header">
-<?php include 'header.php';?>
-</div>
-
-<body>
-	<div id="form_container1">
 <?php
 if (session_status () == PHP_SESSION_NONE) {
 	session_start ();
@@ -36,7 +30,8 @@ if ($dbresult == false) {
 
 $listhandle = mysql_list_fields ( $mysql_database, 'login', $dbhandle );
 $numfields = mysql_num_fields ( $listhandle );
-$found = false;
+
+$_SESSION ['LoggedIn'] = false;
 
 while ( $dbrow = mysql_fetch_array ( $dbresult, MYSQL_ASSOC ) ) {
 	$name = $_POST ['name'];
@@ -44,25 +39,30 @@ while ( $dbrow = mysql_fetch_array ( $dbresult, MYSQL_ASSOC ) ) {
 		setcookie ( 'username', $name );
 		$_SESSION ['user'] = $name;
 		$_SESSION ['LoggedIn'] = true;
-		$found = true;
-		echo "<span id='hello'>Hello " . $_SESSION ['user'] . "!</span>";
-		?>
-		
-	<br> <br> <br> <a href="index.php">Home</a> <br> <br> <a
-			href="account.php">View account details</a>
-<?php
 		break;
 	}
 }
-echo '<br>';
+?>
 
-if (! $found) {
-	echo "Username or password is incorrect!<br><br>";
+<div class=".header">
+<?php include 'header.php';?>
+</div>
+
+<body>
+	<div id="form_container1">	
+<?php
+if ($_SESSION ['LoggedIn']) {
+	echo "<span id='hello'>Hello " . $_SESSION ['user'] . "!</span>";
+	?>
+		<br> <br> <br> <a href="index.php">Home</a> <br> <br> <a
+			href="account.php">View account details</a>
+<?php
+} else {
+	echo "Username or password is incorrect<br><br>";
 	$_SESSION ['LoggedIn'] = false;
 	?>
-	<a href="index.php">Home</a> <br> <br> <a href="login.php">Back to
+		<a href="index.php">Home</a> <br> <br> <a href="login.php">Back to
 			Login</a> 
-		
 	<?php
 }
 ?>
