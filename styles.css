@@ -1,0 +1,264 @@
+* {
+	font-family: Verdana, sans-serif;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: auto;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	padding: 0;
+	margin: auto;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#caption {
+	font-size: 30px;
+}
+
+nav {
+	color: white;
+	width: 100%; /*top right bottom left */
+	height: 40px;
+	text-align: center;
+	background-color: #2d4e89;
+	padding: 2px 11px 15px 0px;
+}
+
+nav ul { /* styles the main links in the ul */
+	font-size: 18px;
+	list-style: none; /* gets rid of dots in ul */
+}
+
+nav ul li {
+	float: left; /* makes links horizontal */
+}
+
+nav ul li a { /* styles the hrefs */
+	display: block; /* makes the whole block clickable */
+	color: #FFF;
+	width: 290px; /* gives words room to spread out */
+	text-decoration: none;
+}
+
+nav ul li #destination {
+	text-align: left;
+}
+
+nav ul li div { /* styles the hrefs */
+	width: 500px; /* gives words room to spread out */
+	text-decoration: none;
+}
+
+nav ul li a:hover { /* styles the hrefs */
+	display: block; /* makes the whole block clickable */
+	color: #999;
+	text-decoration: none;
+	height: 25px;
+}
+
+nav li ul { /* second level - dropdowns */
+	display: none; /* hides dropdowns */
+	padding: 10px 0px 10px 20px;
+}
+
+nav li:hover ul { /* second level - dropdowns */
+	display: block; /* shows dropdowns when we hover */
+	width: 120px;
+	position: absolute;
+	background-color: #2d4e89;
+}
+
+#mainImg {
+	padding: 0;
+	margin: 0;
+	height: 30px;
+	width: 130px;
+	color: white;
+	height: 30px;
+}
+
+section span {
+	padding: 5px, 10px 10px 10px;
+	bottom: 10px;
+}
+
+article, aside, figure, figcaption, footer, header, nav, section {
+	display: block;
+}
+
+section ul {
+	display: none;
+}
+
+img {
+	height: 80%;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-size: 100% 300px;
+	background-repeat: no-repeat;
+}
+
+body {
+	background: #336699;
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: small;
+	text-align: center;
+}
+
+#form_container {
+	background: #fff;
+	margin: 0 auto;
+	text-align: left;
+	width: 640px;
+}
+
+#form_container1 {
+	background: #fff;
+	margin: auto;
+	text-align: center;
+	width: 640px;
+	font-size: 20px;
+	padding: 30px;
+}
+
+#top {
+	display: block;
+	height: 10px;
+	margin: 10px auto 0;
+}
+
+#footer {
+	clear: both;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+#bottom {
+	display: block;
+	height: 10px;
+	margin: 0 auto;
+	width: 650px;
+}
+
+form.appnitro {
+	margin: 20px 20px 0;
+	padding: 0 0 20px;
+}
+
+h1 {
+	background-color: #6699CC;
+	margin: 0;
+	min-height: 0;
+	padding: 0;
+	text-decoration: none;
+	text-indent: -8000px;
+}
+
+h1 a {
+	display: block;
+}
+
+form ul {
+	font-size: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+form li {
+	display: block;
+	margin: 0;
+	position: relative;
+}
+
+/*makes dotted line spread across whole box*/
+.form_description[class] {
+	display: block;
+}
+
+label.description {
+	border: none;
+	color: #222;
+	display: block;
+	font-size: 95%;
+	font-weight: 700;
+	line-height: 150%;
+	padding: 0 0 1px;
+}
+
+input.text {
+	background: #fff url(../../../images/shadow.gif) repeat-x top;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #c3c3c3;
+	border-right: 1px solid #c3c3c3;
+	border-top: 1px solid #7c7c7c;
+	color: #333;
+	font-size: 100%;
+	margin: 0;
+	padding: 2px 0;
+}
+
+.trips, .trips ul {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	padding: 10px;
+	background-color: #2b2f6f;
+	color: white;
+	padding: 10px
+}
+
+.trips li {
+	padding-right: 10px;
+	display: inline;
+	height:
+}
+
+body .trips {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 50%;
+	border: 2px dashed black;
+}
+
+.cost {
+	font-size: 30px;
+}
+
+#user_table {
+	table-layout: fixed;
+	table-layout: fixed;
+	width: 100%;
+}
+
+#user_table a:link, #form_container1 a:link {
+	color: #2b2f6f;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+#user_table a:hover, #form_container1 a:hover {
+	color: #6699CC;
+}
+
+#hello {
+	font-size: 40px;
+}
+
+#id a:link {
+	color: #6699CC;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+#id a:hover {
+	color: #6faffe;
+}
